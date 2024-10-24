@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { WiDaySunny, WiCloud, WiRain, WiSnow, WiThunderstorm } from 'react-icons/wi';
 
 const WeatherComponent = ({city}) => {
   const [weatherData, setWeatherData] = useState(null);
@@ -33,32 +34,56 @@ const WeatherComponent = ({city}) => {
   const getWeatherImage = (weatherCondition) => {
     switch (weatherCondition) {
         case "Clear":
-            return "src/weathers/sun-regular-24.png";
+            return "src/images/sun.png";
         case "Clouds":
-            return "src/weathers/cloud-regular-24.png";
+            return "src/images/cloud.png";
         case "Rain":
-            return "src/weathers/cloud-rain-regular-24.png";
-        // Add more cases for other weather conditions as needed
+            return "src/images/rain.png";
         default:
-            return "src/weathers/sun-regular-24.png";
+            return "src/images/sun.png";
     }
 };
 
-  return (
-    <>
-      <div className='flex flex-col items-center justify-center m-auto mb-4'>
-        <h1 className='bg-blue-300 p-2 rounded-md mb-2 text-3xl'>Weather in {weatherData.name}</h1>
-        <div className='flex flex-row items-center bg-blue-400 p-2 rounded-md text-lg w-full'>
-          <img src={getWeatherImage(weatherData.weather[0].main)} alt={weatherData.weather[0].main} className="h-52 w-52 rounded-md my-10 item-center mx-8" /> 
-          <p className='mx-2 text-white text-xl'>Current Temp: {Math.floor(weatherData.main.temp)}°F </p>
-          <p className='mx-2 text-white text-xl'>Wind Speeds: {Math.floor(weatherData.wind.speed)} MPH </p>
-          <p className='mx-2 text-white text-xl'>Humidity: {Math.floor(weatherData.main.humidity)}% </p>
-          <p className='mx-2 text-white text-xl'>Today's High: {Math.floor(weatherData.main.temp_max)}°F</p>
-          <p className='mx-2 text-white text-xl'>Today's Low: {Math.floor(weatherData.main.temp_min)}°F </p>
+return (
+  <>
+    <div className="flex flex-col items-center justify-center m-auto mb-4 bg-gradient-to-br from-purple-500 to-indigo-600 min-h-screen py-10">
+      <h1 className="bg-gray-800 text-white p-4 rounded-md shadow-md mb-4 text-4xl font-bold">
+        Weather in {weatherData.name}
+      </h1>
+      
+      <div className="flex flex-col sm:flex-row items-center justify-around bg-white bg-opacity-20 p-6 rounded-lg shadow-lg w-full max-w-4xl backdrop-filter backdrop-blur-lg">
+        
+        <img 
+          src={getWeatherImage(weatherData.weather[0].main)} 
+          alt={weatherData.weather[0].main} 
+          className="h-52 w-52 object-cover rounded-lg mb-6 sm:mb-0 shadow-lg"
+        />
+        
+        <div className="text-white text-lg flex flex-col space-y-4">
+          <p className="text-3xl font-semibold">
+            {Math.floor(weatherData.main.temp)}°F
+          </p>
+          <p className="font-medium">
+            Wind Speed: <span className="font-normal">{Math.floor(weatherData.wind.speed)} MPH</span>
+          </p>
+          <p className="font-medium">
+            Humidity: <span className="font-normal">{Math.floor(weatherData.main.humidity)}%</span>
+          </p>
+          <p className="font-medium">
+            High: <span className="font-normal">{Math.floor(weatherData.main.temp_max)}°F</span>
+          </p>
+          <p className="font-medium">
+            Low: <span className="font-normal">{Math.floor(weatherData.main.temp_min)}°F</span>
+          </p>
         </div>
       </div>
-    </>
-  );
-};
+
+      <footer className="text-center text-white mt-6">
+        <p className="text-sm">Powered by Your Weather App</p>
+      </footer>
+    </div>
+  </>
+);
+}
 
 export default WeatherComponent;
