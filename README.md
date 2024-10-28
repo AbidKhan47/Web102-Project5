@@ -1,27 +1,26 @@
-# Web Development Project 5 - *Weather App*
+# Web Development Project 6 - *Weather App V2*
 
 Submitted by: **Abid Khan**
 
-This web app: **Weather APP**
+This web app: **Weather App with Additional information**
 
-Time spent: **10** hours spent in total
+Time spent: **4** hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-- [X] **The list displays a list of data fetched using an API call**
-- [X] **Data uses the useEffect React hook and async/await syntax**
-- [X] **The app dashboard includes at least three summary statistics about the data such as**
-  - [] **The dashboard includes three summary statistics like Current temp, Today's high, Today's low, wind speed**
-- [X] **A search bar allows the user to search for an item in the fetched data**
-- [X] **Multiple different filters (2+) allow the user to filter items in the database by specified categories**
+- [X] **The app includes at least one unique chart developed using the fetched data that tell an interesting story**
+- [X] **Clicking on an item in the list view displays more details about it**
+  - [X] To ensure an accurate grade, your sidebar **must** be viewable when showing the details view in your recording.
+- [X] **Clicking on an item has a direct, unique link to that item's detail view page**
+  - [X] To ensure an accurate grade, the URL/address bar of your web browser **must** be viewable in your recording.  
+
 
 The following **optional** features are implemented:
 
-- [ ] Multiple filters can be applied simultaneously
-- [ ] Filters use different input types such as a text input, a selection, or a slider
-- [ ] The user can enter specific bounds for filter values
+- [X] The site's customized dashboard contains more content that explains what is interesting about the data
+- [X] The site allows users to toggle between different data visualizations
 
 The following **additional** features are implemented:
 
@@ -31,10 +30,10 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='./src/images/WEB 102 Project 5.gif' title='Weather APP' width='' alt='Video Walkthrough' />
+<img src='' title='Weather App V2' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
-GIF created with ScreentoGIF  
+GIF created with ScreenToGIF  
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows

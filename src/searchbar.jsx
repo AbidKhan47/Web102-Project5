@@ -10,7 +10,8 @@ const SearchBar = ({ onCityChange }) => {
     const handleSubmit = (event) => {
         event.preventDefault();
         onCityChange(inputValue);
-        setInputValue(""); // Clear input field after submission
+        <Link to='/'/>
+        setInputValue(""); 
     };
 
     return (
