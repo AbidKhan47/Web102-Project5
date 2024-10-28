@@ -30,7 +30,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='' title='Weather App V2' width='' alt='Video Walkthrough' />
+<img src='src/images/WEB 102 Project 6.gif' title='Weather App V2' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ScreenToGIF  
